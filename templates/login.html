@@ -1,0 +1,17 @@
+<h3><li><a href="register">Sign Up</a></li></h3>
+
+<h1>Login</h1>
+
+{% for message in messages %}
+<h3> {{ message }} </h3>
+{% endfor %}
+
+<form action="login" method="POST">
+    {% csrf_token %}
+    <p>Username:</p>
+    <input type="text" name="username"/>
+    <p>Password:</p>
+    <input type="text" name="password"/><br>
+    <br/>
+    <input type="submit" value="Login"/>
+</form>
